@@ -225,13 +225,21 @@ body {
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 100%;
-        left: -100%;
+        width: 80%; /* не 100%, щоб залишити частину контенту видно */
+        max-width: 320px; /* на телефонах максимум */
+        left: -100%; /* повністю за межами екрану */
     }
+
     .sidebar.active {
         left: 0;
     }
+
+    /* Гамбургер не зсувається на мобільних */
+    .hamburger.active {
+        left: 20px;
+    }
 }
+
 
 
 .more {
