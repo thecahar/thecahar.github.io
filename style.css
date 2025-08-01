@@ -223,6 +223,17 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+}
+
+
 .more {
     text-align: center;
     margin-top: 40px;
