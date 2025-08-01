@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+    z-index: 1500;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.4);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #a855f7;
+    text-shadow: 0 0 10px rgba(168,85,247,0.6);
+}
+
+.sidebar nav a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(138,43,226,0.15);
+    color: #a855f7;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 1400;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Hamburger */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 2000;
+    color: white;
+    background: #a855f7;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(168,85,247,0.6);
+    transition: 0.3s;
+}
+
+.hamburger.active {
+    left: 260px;
+}
+
+/* Контент */
+.content {
+    padding: 80px 20px 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #6d28d9, #a855f7);
+    color: white;
+    padding: 100px 40px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(168,85,247,0.4);
+    margin-bottom: 80px;
+    animation: fadeIn 1s ease;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #a855f7;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(168,85,247,0.5);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #c084fc;
+    box-shadow: 0 0 25px rgba(168,85,247,0.8);
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(26, 26, 46, 0.7);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 12px;
+    color: #f0f0f0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(168,85,247,0.5);
+}
+
+/* Features */
+.features .intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #bbb;
+}
+
+.feature {
+    background: rgba(26, 26, 46, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(168,85,247,0.4);
+}
+
+.feature h3 {
+    margin-top: 0;
+    color: #a855f7;
+    text-shadow: 0 0 10px rgba(168,85,247,0.5);
+}
+
+.feature ul {
+    padding-left: 20px;
+}
+
+.feature code {
+    background: rgba(255,255,255,0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    color: #c084fc;
+}
+
+.feature .example {
+    margin-top: 15px;
+    background: rgba(255,255,255,0.05);
+    padding: 12px 16px;
+    border-left: 4px solid #a855f7;
+    font-size: 0.95em;
+    color: #ccc;
+    border-radius: 4px;
+}
+
+/* Screenshots */
+.screenshots .images {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.screenshots img {
+    max-width: 45%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+
+.screenshots img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(168,85,247,0.5);
+}
+
+/* Анімації */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.more {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+.botfunc_func {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 24px;
+    color: #a855f7;
+    text-shadow: 0 0 10px rgba(168,85,247,0.5);
+}

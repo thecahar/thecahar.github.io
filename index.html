@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гамасєк — Telegram Бот</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h2>Меню</h2>
+        <nav>
+            <a href="#hero">Головна</a>
+            <a href="#features">Функції</a>
+            <a href="#whyus">Чому ми?</a>
+            <a href="#screenshots">Скріншоти</a>
+            <a href="#pricing">Тарифи</a>
+            <a href="#reviews">Відгуки</a>
+            <a href="#contacts">Контакти</a>
+        </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Main content -->
+    <div class="content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <h1>Гамасєк</h1>
+            <p>Розумний Telegram бот для модерації, розваг та аналітики вашої спільноти</p>
+            <a href="https://t.me/hetmutlind_bot" class="btn pulse">🚀 Додати бота</a>
+        </section>
+
+        <!-- Features -->
+        <section class="section features" id="features">
+            <h2>Функції бота</h2>
+            <p class="intro">
+                Гамасєк — це не просто бот. Це ваш особистий <strong>модератор, аналітик та розважальник</strong> у Telegram.  
+                Ось, що він вміє:
+            </p>
+
+            <div class="grid">
+                <div class="card">🛡 Автоматична модерація з варнами та банами</div>
+                <div class="card">📊 Статистика та рейтинги активності</div>
+                <div class="card">🎉 Привітання та персоналізація нових учасників</div>
+                <div class="card">⚡ Репутація та “Потужність” учасників</div>
+                <div class="card">📢 Масові повідомлення та розсилка новин</div>
+                <div class="card">🎮 Міні-ігри та інтерактивні команди</div>
+            </div>
+            <p class="more">
+                <a href="func.html">Детальніше про функції</a>
+        </section>
+
+        <!-- Why Us -->
+        <section class="section features" id="whyus">
+            <h2>Чому обирають <span style="color:#a855f7;">Гамасєк</span>?</h2>
+            <div class="grid">
+                <div class="feature">
+                    <h3>⚡ Швидкість і стабільність</h3>
+                    <p>Побудований на сучасних технологіях <strong>Python + Aiogram</strong>, бот працює миттєво та без збоїв.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 Гнучка персоналізація</h3>
+                    <p>Налаштуйте вітання, команди та поведінку бота під стиль вашої спільноти.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 Безпека</h3>
+                    <p>Бот не збирає приватні дані та дбає про безпеку вашого чату.</p>
+                </div>
+                <div class="feature">
+                    <h3>🤖 Розумні алгоритми</h3>
+                    <p>Система автоматично відслідковує порушників та підвищує рівень дисципліни.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="section screenshots" id="screenshots">
+            <h2>Скріншоти</h2>
+            <div class="images">
+                <img src="screenshot1.jpg" alt="Інтерфейс бота">
+                <img src="screenshot2.jpg" alt="Модерація чату">
+                <img src="screenshot3.jpg" alt="Статистика">
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="section pricing" id="pricing">
+            <h2>Тарифи</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Free</h3>
+                    <p>✔ Основні команди</p>
+                    <p>✔ Модерація</p>
+                    <p>✔ Статистика</p>
+                    <p><strong>0₴ / назавжди</strong></p>
+                </div>
+                <div class="card highlight">
+                    <h3>Premium</h3>
+                    <p>✨ Усі функції Free</p>
+                    <p>✨ Персоналізація</p>
+                    <p>✨ Ексклюзивні ігри</p>
+                    <p><strong>99₴ / місяць</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="section reviews" id="reviews">
+            <h2>Відгуки користувачів</h2>
+            <div class="grid">
+                <div class="feature">
+                    <p>“Цей бот врятував наш чат від спаму та зробив його живішим. Рекомендую!”</p>
+                    <strong>— @chat_admin</strong>
+                </div>
+                <div class="feature">
+                    <p>“Функція репутації — топ! У нас тепер є змагання за потужність 😎”</p>
+                    <strong>— @funny_user</strong>
+                </div>
+                <div class="feature">
+                    <p>“Найзручніший бот для Telegram, і ще й красивий. 10/10.”</p>
+                    <strong>— @tech_guy</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts -->
+        <section class="section contacts" id="contacts">
+            <h2>Контакти</h2>
+            <p>Напишіть мені в Telegram: <a href="https://t.me/hetmutlind">@hetmutlind</a></p>
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("overlay").classList.toggle("active");
+            document.getElementById("hamburger").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
